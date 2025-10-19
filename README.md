@@ -9,6 +9,7 @@
 # UI
 ![alt text](image.png)
 
+
 ---
 ## Overview
 
@@ -64,64 +65,15 @@ This will:
 
 ---
 
-## Dockerfile Examples
+### Backend 
 
-### Backend (`Dockerfile.api`)
-FROM python:3.10-slim
-
-WORKDIR /app
-
-RUN apt-get update && apt-get install -y git
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY app/ ./app/
-COPY data/ ./data/
-COPY scripts/ ./scripts/
-
-EXPOSE 8000
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 ---
 
-### Frontend (`UI/Dockerfile`)
-FROM node:18-alpine
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-EXPOSE 5173
+### Frontend
 
 CMD ["npm", "run", "dev", "--", "--host"]
-
----
-
-### Docker Compose (`docker-compose.yml`)
-version: '3.8'
-services:
-backend:
-build:
-context: .
-dockerfile: Dockerfile.api
-ports:
-- "8000:8000"
-volumes:
-- ./data:/app/data
-
-frontend:
-build: ./UI
-ports:
-- "5173:5173"
-environment:
-- VITE_API_BASE_URL=http://backend:8000
-depends_on:
-- backend
-
 
 ---
 
@@ -137,6 +89,7 @@ depends_on:
 ## License
 
 MIT License
+
 
 
 
