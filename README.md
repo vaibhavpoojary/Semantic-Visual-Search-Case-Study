@@ -1,11 +1,14 @@
 # Visual Semantic Search
 
-![alt text](image.png)
+# Application Architecture
+![alt text](diagram-export-19-10-2025-22_26_58.png)
+
+# Cloud Architecture
+![alt text](diagram-export-19-10-2025-22_26_21.png)
 
 # UI
 ![alt text](image.png)
 
-# Visual Semantic Search
 ---
 ## Overview
 
