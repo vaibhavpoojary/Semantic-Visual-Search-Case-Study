@@ -1,10 +1,10 @@
 # Visual Semantic Search
 
 # Application Architecture
-![alt text](diagram-export-19-10-2025-22_26_58.png)
+<img width="1603" height="954" alt="app_arch" src="https://github.com/user-attachments/assets/cc45a0cd-8662-4dcd-ade8-6ef0ce4c2cc1" />
 
 # Cloud Architecture
-![alt text](diagram-export-19-10-2025-22_26_21.png)
+<img width="2315" height="954" alt="cloud" src="https://github.com/user-attachments/assets/e2b4b77e-889a-4325-8f96-fa378ce7ea38" />
 
 # UI
 ![alt text](image.png)
