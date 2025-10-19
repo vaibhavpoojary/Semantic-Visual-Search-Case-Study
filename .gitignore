@@ -1,0 +1,56 @@
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node/React (UI)
+UI/node_modules/
+UI/dist/
+UI/.vite/
+UI/.env
+UI/.env.*
+
+# Docker
+docker-data/
+*.pid
+*.sock
+
+# Build/Cache
+build/
+dist/
+.cache/
+coverage/
+htmlcov/
+
+# Data: ignore large assets
+data/**
+!data/.gitkeep
+!data/README.md
+
+# Backend data artifacts (if placed under app/data)
+app/data/images/**
+app/data/**/*.npy
+app/data/**/*.npz
+app/data/**/*.bin
+app/data/**/*.faiss
+app/data/**/*.pt
+app/data/**/*.pth
+app/data/**/*.parquet
+app/data/**/*.arrow
+app/data/**/*.csv
+
+# Allow small samples and public placeholders
+!app/data/samples/**
+!UI/public/placeholder.svg
